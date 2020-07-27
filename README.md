@@ -4,18 +4,18 @@ This project aims to provide the client - Steve - with data on the performance o
 
 The list of stocks included: 
 
--AY
--CSIQ
--DQ
--ENPH
--FSLR
--HASI
--JKS
--RUN
--SEDG
--SPWR
--TERP
--VSLR
+- AY
+- CSIQ
+- DQ
+- ENPH
+- FSLR
+- HASI
+- JKS
+- RUN
+- SEDG
+- SPWR
+- TERP
+- VSLR
 
 # Results
 Overall, the data showed that most stocks performed better in 2017 than they did in 2018 with the exception of TERP, which was down 5.0% in 2017 versus being down 7.2% in 2017 – a difference of 2.2 percentage points. 
@@ -43,7 +43,9 @@ I went on to calculate the row count ahead of setting up two “for” loops tha
 I then added three if/then statements to calculate the total volume, starting prices and ending prices. 
 
 **Total Volume:** I indicated that if the value of a cell in the ticker column was indeed equal to a ticker, then total volume would be equal to its initial zero value *plus* the sum of the appropriate volume cells assigned to their specific ticker. 
+
 **Starting Price:** I wrote a script to identify that when a ticker value was not equal to the value above it, but it *was* equal to the value below it, then the starting price would be equal to that first cell for a specific ticker, determined based on the close price column (in my case, that was column G, which was indicated by nine in the formula.)
+
 **Ending Price:** The ending price script was very similar to the starting price script and I only had to adjust so that the script could identify that the ticker below was not equal to the value. 
 
 Now that the code was written to calculate the appropriate values based on set parameters, I needed to identify where those calculations would go, so I reactivated the “All Stocks Analysis” sheet by using `Worksheets(“All Stocks Analysis”).Activate` and assigned the output destinations for each ticker. 
